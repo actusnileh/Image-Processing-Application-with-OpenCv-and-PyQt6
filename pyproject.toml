@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "image-processing-application-with-opencv-and-pyqt6"
+version = "0.1.0"
+description = ""
+authors = ["actusnileh <actusnileh@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyqt6 = "^6.7.1"
+opencv-python = "^4.10.0.84"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+multi_line_output=3
+include_trailing_comma=true
+line_length=120
+lines_after_imports=2
+lines_between_sections=1
+lines_between_types=0
+force_alphabetical_sort_within_sections=true
+ensure_newline_before_comments=true
+combine_as_imports=true
+combine_star=true
+skip_gitignore=true
+balanced_wrapping=true
+force_grid_wrap=2
+src_paths=["app", "tests"]
+skip_glob=[
+    ".git",
+    ".idea",
+    ".vscode",
+    "venv",
+    ".venv",
+]
+known_first_party=["app"]
+sections=[
+    "FUTURE",
+    "STDLIB",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
